@@ -3,7 +3,7 @@ The purpose of this script is to be used to clean up and analyze CAD data from E
 organization CAHOOTS has had on the community.
 
  # Packages
- The script starts by importing pandas and numpy. These packages are needed in order to manipulate the dataframes and perform mathematical equations.
+ The script starts by importing pandas, numpy, LinearRegression and mean_squared_error from sklearn, and norm from scipy. These packages are needed in order to manipulate the dataframes, perform mathematical equations and linear regression analysis.
 
  # Cleaning
  The cleaning portion of the file begins by first importing the CAD csv and assigning it to simply "cad". Then, uses .head() in order to view the data to ensure 
