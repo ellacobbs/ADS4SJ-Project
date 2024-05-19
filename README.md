@@ -23,6 +23,12 @@ organization CAHOOTS has had on the community.
 
  # Analysis
  For the first step of analysis, a function defined as z_score calculates the z-score of two proportions, in this case, the proportion of the number of CAHOOTS or diverted calls
- before and after the service date. The c1 argument is the number of calls for CAHOOTS or that CAHOOTS were diverted to in the year before, c2 being the same but for the year after.
- n1 is the total number of calls for the whole year before, and n2 is the total number of calls for the year after. The function is used to calculate the z-score of the proportion of
- CAHOOT calls, assigned to "chcalls_z" and the same for calls diverted to CAHOOTS, "divert_z". 
+ before and after the service date, as well as the p-value of that z-score. The c1 argument is the number of calls for CAHOOTS or that CAHOOTS were diverted to in the year before,
+ c2 being the same but for the year after.n1 is the total number of calls for the whole year before, and n2 is the total number of calls for the year after. The function is used 
+ to calculate the z-score and p-value of the proportion of CAHOOT calls, assigned to "chcalls_z" and the same for calls diverted to CAHOOTS, "divert_z". 
+
+ Then for the linear regression portion, first a portion of the dataset is taken to only include calls where CAHOOTS responded, saved as "ch_calls". Then, seperate proportions of 
+ CAHOOTS calls are calculated for every year, 2016 - 2021 using this data set and the main dataset as well. These proportions are then put into their own dataframe corresponding
+ with the year they came from, "calls_over_time". Then, the x-variable for the linear regression is defined as the year column from the dataset, and the y-variable as the 
+ proportions. The model is defined as LinearRegression from sklearn and is fit to the x and y variables. Then, an array of years for prediction is defined as "future_years" including 
+ 2025 - 2035. The years and predicted proportions are then placed in another dataframe, "year predictions". 
