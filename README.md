@@ -1,4 +1,4 @@
-# ADS4SJ-Project
+# CAHOOTS
 The purpose of this script is to be used to clean up and analyze CAD data from Eugene, Oregon in order to better analyze the impact that the 
 organization CAHOOTS has had on the community.
 
